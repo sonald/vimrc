@@ -19,6 +19,8 @@ call pathogen#helptags()
 " double percentage sign in command mode is expanded
 " to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+nnoremap <silent> <Leader>bt :CommandT<CR>
+nnoremap <silent> <Leader>bl :CommandTBuffer<CR>
 
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
@@ -42,7 +44,7 @@ let g:clang_complete_macros=1
 let g:clang_complete_patterns=0
 nnoremap <Leader>q :call g:ClangUpdateQuickFix()<CR>
 
-let g:clic_filename="index.db"
+let g:clic_filename="~/index.db"
 nnoremap <Leader>r :call ClangGetReferences()<CR>
 nnoremap <Leader>d :call ClangGetDeclarations()<CR>
 nnoremap <Leader>s :call ClangGetSubclasses()<CR>
