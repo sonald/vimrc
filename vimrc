@@ -44,7 +44,7 @@ let g:clang_complete_macros=1
 let g:clang_complete_patterns=0
 nnoremap <Leader>q :call g:ClangUpdateQuickFix()<CR>
 
-let g:clic_filename="~/index.db"
+let g:clic_filename="index.db"
 nnoremap <Leader>r :call ClangGetReferences()<CR>
 nnoremap <Leader>d :call ClangGetDeclarations()<CR>
 nnoremap <Leader>s :call ClangGetSubclasses()<CR>
@@ -97,8 +97,7 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 
-
-au BufRead,BufNewFile *.go set filetype=go
+"au BufRead,BufNewFile *.go set filetype=go
 
 set background=dark
 
