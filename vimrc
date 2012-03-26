@@ -83,6 +83,7 @@ set backspace=indent,eol,start
 set laststatus=2
 " set relativenumber
 set undofile
+set autoread  " auto re-read disk-changed file
 
 " nnoremap / /\v
 " vnoremap / /\v
@@ -96,8 +97,20 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" make area reselected after (de)indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" treat wrapped lines as seprated
+nnoremap j gj
+nnoremap k gk
 
 "au BufRead,BufNewFile *.go set filetype=go
+
+set cul
+highlight CursorLine term=bold cterm=bold ctermbg=0 gui=bold guibg=DarkGrey
+highlight Search term=reverse cterm=reverse ctermbg=DarkGrey gui=reverse guibg=DarkGrey
+highlight MatchParen ctermfg=cyan ctermbg=black guibg=white guifg=DarkCyan
 
 set background=dark
 
