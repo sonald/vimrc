@@ -5,6 +5,10 @@ syntax on
 set nocompatible
 set nobackup
 
+if has('mouse')
+    set mouse=a
+endif
+
 filetype plugin on
 filetype indent on
 
