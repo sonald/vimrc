@@ -16,9 +16,6 @@
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = http://github.com/tpope/vim-rails.git
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = http://github.com/sonald/clang_complete.git
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
@@ -64,6 +61,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/powerline"]
-	path = bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git

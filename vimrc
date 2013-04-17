@@ -38,7 +38,7 @@ let g:clang_hl_errors=1
 let g:clang_periodic_quickfix=0
 let g:clang_snippets=1
 let g:clang_snippets_engine="clang_complete"
-let g:clang_conceal_snippets=1
+let g:clang_conceal_snippets=0
 let g:clang_exec="clang"
 let g:clang_user_options=""
 let g:clang_auto_user_options="path,.clang_complete"
@@ -88,7 +88,19 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 " set relativenumber
-set undofile
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.vim/undo//
+  set undofile
+endif
+
 set autoread  " auto re-read disk-changed file
 
 " nnoremap / /\v
