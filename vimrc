@@ -134,12 +134,14 @@ au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
 au BufEnter *.org call org#SetOrgFileType()
 
 "" powerline
-set guifont=Terminus\ for\ Powerline
+"set guifont=Inconsolata\ for\ Powerline
+set guifont=Source\ Code\ Pro\ Light\ for\ Powerline
 set laststatus=2
 set encoding=utf-8
 let g:Powerline_symbols = 'fancy'
 "let g:Powerline_symbols = 'unicode'
 let g:Powerline_colorscheme = 'skwp'
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 "set cul
 "highlight CursorLine term=bold cterm=bold ctermbg=0 gui=bold guibg=DarkGrey
